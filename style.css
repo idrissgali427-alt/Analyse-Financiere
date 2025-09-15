@@ -1,0 +1,369 @@
+/* Importation de la police Google Fonts pour un look moderne */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- Styles Généraux --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Couleur de fond douce */
+    color: #333; /* Couleur de texte sombre */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- En-tête (Header) --- */
+.main-header {
+    background-color: #004d40; /* Vert foncé pour l'en-tête */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.app-title {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header-widgets {
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-widgets label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#responsable-input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+#responsable-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* --- Conteneur principal de l'application --- */
+.app-container {
+    display: flex;
+    flex: 1;
+}
+
+/* --- Barre de navigation latérale (Side Nav) --- */
+.side-nav {
+    width: 250px;
+    background-color: #263238; /* Gris sombre pour la navigation */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+}
+
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    margin-bottom: 10px;
+}
+
+.side-nav a {
+    color: #b0bec5; /* Gris clair */
+    text-decoration: none;
+    font-size: 1em;
+    padding: 15px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: #37474f; /* Gris plus clair au survol */
+    color: white;
+}
+
+.side-nav a.active {
+    background-color: #00796b; /* Vert-bleu pour l'élément actif */
+    color: white;
+    font-weight: bold;
+}
+
+.side-nav a i {
+    margin-right: 10px;
+}
+
+/* --- Contenu principal (Main Content) --- */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+h2 {
+    color: #004d40;
+    border-bottom: 2px solid #b2dfdb;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- Styles des formulaires --- */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+form label {
+    font-weight: bold;
+    color: #555;
+    flex: 1;
+    min-width: 200px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* S'assure que le padding n'augmente pas la taille */
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #00796b;
+}
+
+button[type="submit"]:hover {
+    background-color: #004d40;
+}
+
+#annuler-entreprise, #annuler-rapport, #annuler-bancaire {
+    background-color: #d32f2f;
+}
+
+#annuler-entreprise:hover, #annuler-rapport:hover, #annuler-bancaire:hover {
+    background-color: #b71c1c;
+}
+
+/* --- Styles des tableaux --- */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+thead th {
+    background-color: #e0f2f1;
+    color: #004d40;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #b2dfdb;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eceff1;
+}
+
+tbody tr:hover {
+    background-color: #f5f8fa;
+}
+
+/* Styles pour les boutons dans les tableaux */
+tbody td button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+tbody td button:first-of-type { /* Modifier */
+    background-color: #ffb74d;
+    border-color: #ff9800;
+    color: #fff;
+}
+tbody td button:first-of-type:hover {
+    background-color: #ffa726;
+}
+
+tbody td button:last-of-type { /* Supprimer */
+    background-color: #e57373;
+    border-color: #ef5350;
+    color: #fff;
+}
+tbody td button:last-of-type:hover {
+    background-color: #ef5350;
+}
+
+
+/* --- Styles spécifiques aux sections --- */
+/* Section Accueil */
+.accueil-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 48%; /* Permet une disposition horizontale */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.analyses-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#analyse-texte p {
+    line-height: 1.6;
+}
+
+/* Sections Évolution et Bilan */
+#evolution-display, #resultat-bilan {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#conseils h3 {
+    color: #00796b;
+}
+
+.bilan-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+#generer-bilan, #enregistrer-bilan, #imprimer-bilan {
+    background-color: #4db6ac;
+}
+#generer-bilan:hover, #enregistrer-bilan:hover, #imprimer-bilan:hover {
+    background-color: #26a69a;
+}
+
+/* Styles pour les graphiques */
+.bilan-graphique-container {
+    max-width: 300px; /* Taille désirée */
+    max-height: 300px;
+    margin: 0 auto;
+}
+
+/* --- Style du reçu --- */
+.receipt-header {
+    background-color: #e0f2f1;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.receipt-header h3 {
+    margin: 0;
+    color: #004d40;
+}
+
+.receipt-header .info {
+    text-align: right;
+    color: #555;
+}
+
+
+/* -------------------------------------------
+   Règles pour l'impression (Print)
+   ------------------------------------------- */
+@media print {
+    body {
+        background-color: #fff; /* Fond blanc pour l'impression */
+    }
+    .main-header, .side-nav, #form-bilan, .bilan-actions, h2, #resultat-bilan {
+        display: none; /* Cache les éléments de navigation et les formulaires */
+    }
+    #bilan-content, #bilan-graphique, .receipt-header {
+        display: block !important; /* Affiche les éléments du bilan */
+        box-shadow: none; /* Supprime les ombres */
+        background-color: #fff; /* Fond blanc */
+        border: none; /* Supprime les bordures */
+        margin: 0;
+        padding: 0;
+    }
+    .receipt-header {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .receipt-header .info {
+        text-align: right;
+    }
+    #bilan-graphique {
+        width: 100%;
+        max-width: 400px; /* Taille optimale pour l'impression */
+        margin: 20px auto;
+    }
+}
