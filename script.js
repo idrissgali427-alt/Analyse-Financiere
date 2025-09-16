@@ -67,7 +67,7 @@ navLinks.forEach(link => {
 // Initialiser l'application
 document.addEventListener('DOMContentLoaded', () => {
     updateDateTime();
-    setInterval(updateDateTime, 1000);
+    
 
     // Afficher la première section par défaut
     switchSection('singleOilForm');
@@ -489,3 +489,4 @@ if (motDePasseSaisi === motDePasseRequis) {
   // Tu peux rediriger l'utilisateur ou cacher le contenu
   window.location.href = ''; // Exemple de redirection
 }
+
